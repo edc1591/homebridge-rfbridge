@@ -1,0 +1,27 @@
+{
+  "name": "homebridge-rfbridge",
+  "version": "0.1.0",
+  "description": "A homebridge plugin for controlling various RF devices like ceiling fans.",
+  "license": "MIT",
+  "keywords": [
+    "homebridge-plugin",
+    "ceiling fan",
+    "minka aire",
+    "rf"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/edc1591/homebridge-rfbridge.git"
+  },
+  "bugs": {
+    "url": "http://github.com/edc1591/homebridge-rfbridge/issues"
+  },
+  "engines": {
+    "node": ">=0.12.0",
+    "homebridge": ">=0.2.0"
+  },
+  "dependencies": {
+    "grpc": "^1.7.2",
+    "mdns": "^2.3.4"
+  }
+}
