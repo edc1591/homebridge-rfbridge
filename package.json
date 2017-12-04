@@ -1,6 +1,6 @@
 {
   "name": "homebridge-rfbridge",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A homebridge plugin for controlling various RF devices like ceiling fans.",
   "license": "MIT",
   "keywords": [
