@@ -19,7 +19,12 @@ function RFBridge(log, config, api) {
   this.config = config;
   this.accessories = [];
 
-  this.browser = mdns.createBrowser(mdns.tcp('rfbridge'));
+  var sequence = [
+    mdns.rst.DNSServiceResolve(),
+    'DNSServiceGetAddrInfo' in mdns.dns_sd ? mdns.rst.DNSServiceGetAddrInfo() : mdns.rst.getaddrinfo({families:[4]}),
+    mdns.rst.makeAddressesUnique()
+  ];
+  this.browser = mdns.createBrowser(mdns.tcp('rfbridge'), {resolverSequence: sequence});
   var that = this;
   this.browser.on('serviceUp', function(service) {
     const port = service.port;
